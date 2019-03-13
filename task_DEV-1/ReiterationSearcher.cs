@@ -10,30 +10,30 @@ namespace task_DEV_1
         /// </summary>
         /// <param name="arg"> initial string </param>
         /// <returns> all strings without reiterations, which are longer than two symbols </returns>
-        public List<string> GetStrings(string arg)
+        public List<string> GetUnrepeatSymb(string arg)
         {
             var output = new List<string>();
-            var circleSave = new StringBuilder();
-            circleSave.Append(arg[0]);
+            var outputPart = new StringBuilder();
+            outputPart.Append(arg[0]);
             for (var i = 1; i < arg.Length; i++)
                 if (arg[i] != arg[i - 1])
                 {
-                    circleSave.Append(arg[i]);
-                    if (circleSave.Length >= 2)
+                    outputPart.Append(arg[i]);
+                    if (outputPart.Length >= 2)
                     {
-                        output.Add(circleSave.ToString());
-                        if (circleSave.Length >= 3)
-                            for (var j = 0; j < circleSave.Length - 2; j++)
+                        output.Add(outputPart.ToString());
+                        if (outputPart.Length >= 3)
+                            for (var j = 0; j < outputPart.Length - 2; j++)
                             {
-                                circleSave.Remove(0, j + 1);
-                                output.Add(circleSave.ToString());
+                                outputPart.Remove(0, j + 1);
+                                output.Add(outputPart.ToString());
                             }
                     }
                 }
                 else
                 {
-                    circleSave.Remove(0, circleSave.Length);
-                    circleSave.Append(arg[i]);
+                    outputPart.Remove(0, outputPart.Length);
+                    outputPart.Append(arg[i]);
                 }
 
             return output;

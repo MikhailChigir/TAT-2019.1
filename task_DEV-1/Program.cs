@@ -14,7 +14,10 @@ namespace task_DEV_1
                 if (args[0].Length < 2)
                     throw new ArgumentException("Argument is too short");
                 var searcher = new ReiterationSearcher();
-                foreach (var s in searcher.GetStrings(args[0])) Console.WriteLine(s);
+                foreach (var s in searcher.GetUnrepeatSymb(args[0]))
+                {
+                    Console.WriteLine(s);
+                }
             }
             catch (Exception e)
             {
