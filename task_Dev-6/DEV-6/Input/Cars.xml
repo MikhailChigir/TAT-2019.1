@@ -1,4 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <cars>
-  <car></car>
+  <car>
+    <type>Jiguli</type>
+    <model>Kopeyka</model>
+    <cost>12</cost>
+    <quantity>985405</quantity>
+  </car>
+  <car>
+    <type>Ford</type>
+    <model>GT-40</model>
+    <cost>400000</cost>
+    <quantity>500</quantity>
+  </car>
+  <car>
+    <type>Ford</type>
+    <model>Mustang</model>
+    <cost>30000</cost>
+    <quantity>24000</quantity>
+  </car>
+  <car>
+    <type>BMW</type>
+    <model>7-reihe</model>
+    <cost>35000</cost>
+    <quantity>20000</quantity>
+  </car>
 </cars>

@@ -55,7 +55,7 @@ namespace DEV_6
         public string CountAll()
         {
             var counter = from car in cars
-                select car.Number;
+                select car.Quantity;
             return counter.ToString();
 
         }
@@ -71,7 +71,7 @@ namespace DEV_6
             var type = Console.ReadLine();
             var counter = from car in cars
                 where car.Type == type
-                select car.Number;
+                select car.Quantity;
             return counter.ToString();
         }
     }
