@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
+﻿using System.Collections.Generic;
 using System.Xml.Linq;
 
 namespace DEV_6
 {
-    class XmlParser
+    internal class XmlParser
     {
-        private readonly  XDocument _xDoc;
+        private readonly XDocument _xDoc;
 
-        public XmlParser(String FileLink) => _xDoc = XDocument.Load(FileLink);
+        public XmlParser(string FileLink)
+        {
+            _xDoc = XDocument.Load(FileLink);
+        }
 
         public List<Car> GetCars()
         {
@@ -26,12 +24,9 @@ namespace DEV_6
 
                 var car = new Car(Type, Model, Price, Quantity);
                 cars.Add(car);
-
             }
 
             return cars;
-
         }
-        
     }
 }

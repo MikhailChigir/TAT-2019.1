@@ -1,29 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
-using System.Xml.Serialization;
 
 namespace DEV_6
 {
     /// <summary>
-    /// This class is an entry point of this programm
+    ///     This class is an entry point of this programm
     /// </summary>
-    class EntryPoint
+    internal class EntryPoint
     {
-
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             try
             {
-                XmlParser XmlParser = new XmlParser(args[0]);
-                var cars = XmlParser.GetCars();
+                var ParseCars = new XmlParser(args[0]);
+                var cars = ParseCars.GetCars();
+                var ParseTrucks = new XmlParser(args[1]);
+                var trucks = ParseTrucks.GetCars();
 
-                Reciever r = new Reciever(cars);
-                Invoker inv = new Invoker(r);
+                Invoker inv;
+                var rCars = new Reciever(cars);
+                var rTrucks = new Reciever(trucks);
+
+                Console.WriteLine("Choose type: " +
+                                  "1) Cars" +
+                                  "2) Trucks");
+                Console.WriteLine("Your choice: ");
+                var choice = Console.ReadLine();
+                if ("1" == choice)
+                    inv = new Invoker(rCars);
+                else
+                    inv = new Invoker(rTrucks);
 
                 inv.DrawMenu();
                 inv.PerformAction();
