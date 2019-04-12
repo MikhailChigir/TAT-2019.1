@@ -17,10 +17,10 @@ namespace DEV_6
             var cars = new List<Car>();
             foreach (var element in _xDoc.Element("cars")?.Elements("car"))
             {
-                var Model = element.Element("model").ToString();
-                var Price = element.Element("price").ToString();
-                var Quantity = element.Element("quantity").ToString();
-                var Type = element.Element("type").ToString();
+                var Model = element.Element("model").Value;
+                var Price = element.Element("price").Value;
+                var Quantity = element.Element("quantity").Value;
+                var Type = element.Element("type").Value;
 
                 var car = new Car(Type, Model, Price, Quantity);
                 cars.Add(car);

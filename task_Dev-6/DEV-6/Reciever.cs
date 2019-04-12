@@ -57,7 +57,7 @@ namespace DEV_6
         {
             var counter = from car in cars
                 select car.Quantity;
-            return counter.ToString();
+            return counter.Sum().ToString();
         }
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace DEV_6
             var counter = from car in cars
                 where car.Type == type
                 select car.Quantity;
-            return counter.ToString();
+            return counter.Sum().ToString();
         }
     }
 }
