@@ -22,12 +22,6 @@ namespace DEV_6
                 XmlParser XmlParser = new XmlParser(args[0]);
                 var cars = XmlParser.GetCars();
 
-                foreach (var c in cars)
-                {
-                    Console.WriteLine(c.Price);
-                    Console.WriteLine(c.Model);
-                }
-
                 Reciever r = new Reciever(cars);
                 Invoker inv = new Invoker(r);
 
