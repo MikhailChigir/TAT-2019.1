@@ -12,15 +12,15 @@ namespace DEV_6
     /// </summary>
     class Reciever
     {
-        private Car[] cars;
+        private List<Car> cars;
         
         /// <summary>
         /// Constructor for getting array of cars.  
         /// </summary>
         /// <param name="cars">
-        /// Array parsed from xml doc
+        /// List parsed from xml doc
         /// </param>
-        public Reciever(Car[] cars) => this.cars = cars;
+        public Reciever(List<Car> cars) => this.cars = cars;
 
         /// <summary>
         ///Counts average price of all cars
