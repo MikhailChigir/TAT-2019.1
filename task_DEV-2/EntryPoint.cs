@@ -30,10 +30,11 @@ namespace task_DEV_2
                                                 " And maybe in your life.");//!FIX remove a joke
                 var dirtyHumanistCan = new PhonemeBuilder();
                 foreach (var s in dirtyHumanistCan.BuildPhoneme(args[0]).ToString()) //!FIX remove truth (so political)
-                    Console.WriteLine(s);
                 {
-                    
+                    Console.WriteLine(s);
                 }
+
+                Console.ReadLine();
 
 
             }

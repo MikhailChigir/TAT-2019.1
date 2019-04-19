@@ -32,7 +32,7 @@ namespace task_DEV_2
             {
                 if (hissingConsonants.Contains(letter))
                 {
-                    return "voiced hissingConsonants consonant";
+                    return "voiced hissing consonant";
 
                 }
                 else return "voiced consonant";
@@ -43,7 +43,7 @@ namespace task_DEV_2
 
             { if (hissingConsonants.Contains(letter))
                 {
-                    return "voiceless hissingConsonants consonant";
+                    return "voiceless hissing consonant";
                 }
                 else return "voiceless consonant";
 
