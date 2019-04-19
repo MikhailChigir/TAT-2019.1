@@ -9,7 +9,7 @@ namespace Tests_DEV2
     {
         [TestMethod] public void ChangingLetterType_c_VoicelessHissingConsonant()
         {
-            string expected = "voiceles hissing consonant";
+            string expected = "voiceless consonant";
 
             ChangingSymbols c = new ChangingSymbols();
             string actual = c.ChangingLetterType('с');
