@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace task_DEV_2
 {
-    class ChangingSymbols
+    public class ChangingSymbols
     {
         private string signs = "ьъ";
         private string vowels = "аеёиоуыэюя";

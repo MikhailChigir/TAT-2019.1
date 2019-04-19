@@ -2,7 +2,7 @@
 
 namespace task_DEV_2
 {
-    internal class PhonemeBuilder
+    public class PhonemeBuilder
     {
         //private string phoneme = "undefined";
         private string rType = "undefined";

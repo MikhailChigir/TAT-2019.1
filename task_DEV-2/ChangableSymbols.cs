@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace task_DEV_2
 {
-    class ChangableSymbols
+    public class ChangableSymbols
     {
         private string changable = "оеюяёбвзгджпфсктши";
         private string yoatedVowels = "яеёю";

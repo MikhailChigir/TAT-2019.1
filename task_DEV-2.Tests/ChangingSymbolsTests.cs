@@ -1,7 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using task_DEV_2;
 
-namespace UnitTestProject1
+namespace Tests_DEV2
 {
     [TestClass]
     public class ChangingSymbolsTests
@@ -10,8 +11,8 @@ namespace UnitTestProject1
         {
             string expected = "voiceles hissing consonant";
 
-            ChangingSymbols c = new ChangingSymbols;
-            string actual = c.ChangingLetterType("с");
+            ChangingSymbols c = new ChangingSymbols();
+            string actual = c.ChangingLetterType('с');
 
             Assert.AreEqual(expected, actual);
         }

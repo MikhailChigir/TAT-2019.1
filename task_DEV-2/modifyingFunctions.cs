@@ -1,6 +1,6 @@
 ﻿namespace task_DEV_2
 {
-    internal class ModifyingFunctions
+    public class ModifyingFunctions
     {
         public string YoatedTo2Letters(char letter)
         {

@@ -1,7 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using task_DEV_2;
 
-namespace UnitTestProject1
+namespace Tests_DEV2
 {
     [TestClass]
     public class PhonemeBuilderTests
@@ -12,7 +13,7 @@ namespace UnitTestProject1
             string expected = "жымолост'";
 
             PhonemeBuilder b = new PhonemeBuilder();
-            string actual = b.BuildPhoneme("жи+молость");
+            string actual = b.BuildPhoneme("жи+молость").ToString();
 
             Assert.AreEqual(expected, actual);
         }
